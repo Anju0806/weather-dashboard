@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header class="p-3 text-center text-white bg-primary">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div id="flex-container">
+        <section id="flex-initial">
+            <form>
+                <ul class="search-city">
+                    <li> <label for="city-name">
+                            <h2 class="pd-2"> Search for a City: </h2>
+                        </label> </li>
+                    <li> <input class="input" type="text" placeholder="San Diego"> </li>
+                    <li> <button class="button is-info" type="submit">Search</button> </li>
+                </ul>
+            </form>
+            <section>
+                <ul class="stored-city"></ul> <!-- generate list of buttons with this element for the searched city names from local storage-->
+            </section>
+        </section>
+        <div id="flex-auto">
+            <textarea style="resize: none;" class="current-weather-ta" readonly placeholder="city weather goes here" rows="10">
+            </textarea> <!-- generare current city weather here -->
+            <label for="city-name">
+                <h3 class="m-2"> 5-Day Forecast: </h3>
+            </label>
+
+            <secton id="sec_5day_forcast">
+                <ul id="ul_5day_forecast"></ul> <!-- generate a list of textareas with 5 day forecast here -->
+            </section>
+        </div>
+    </div>   
+</body>
+
+</html>
+
+<!-- <ul id="ul_5day_forecast"> generate a list of textareas with 5 day forecast here 
+    <li>&#8227; <a href="" class="a_top_hypers"> Inbox</a></li>
+    <li>&#8227; <a href="" class="a_top_hypers"> Compose</a></li>
+    <li>&#8227; <a href="" class="a_top_hypers"> Reports</a></li>
+    <li>&#8227; <a href="" class="a_top_hypers"> Preferences</a></li>
+    <li>&#8227; <a href="" class="a_top_hypers"> logout</a></li>
+</ul> -->
