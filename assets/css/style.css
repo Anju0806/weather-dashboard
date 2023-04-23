@@ -11,7 +11,8 @@ body {
 .p-3 {
     padding: .3rem;
 }
-.m-2{
+
+.m-2 {
     margin: 2rem;
 }
 
@@ -27,78 +28,102 @@ body {
 #flex-container {
     display: flex;
     margin-left: 1.5rem;
-  }
-  
- 
-  
-  #flex-auto {
+}
+
+#flex-auto {
     flex: auto;
-    
-   
-  }
-  
-  #flex-initial {
+
+
+}
+
+#flex-initial {
     border-bottom: 1px solid rgb(247, 245, 245);
-    
-  }
-.pd-2{
+
+}
+
+.pd-2 {
     padding-right: 3rem;
 }
-  
+
 
 .bg-primary {
     background-color: #110272da;
 }
-.search-city{
+
+.search-city {
     list-style-type: none;
-    padding:0;
+    padding: 0;
     border-bottom: 1px solid rgb(131, 126, 126);
-   
+
 }
-.search-city li{
-     padding-bottom: 1rem; 
+
+.search-city li {
+    padding-bottom: 1rem;
 }
-.input{
+
+.input {
     display: block;
     width: 100%;
     padding: .8rem;
 }
-.button{
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #3a74e0da;
-  color: #f0f2f4da;
-  padding: 8px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  
-}
-.stored-city{
-    list-style-type: none;
-    padding:0;
 
-}
-.current-weather-ta{
+.button {
     display: block;
-  width: 90%;
-    margin: 2rem ;
-  
+    width: 100%;
+    border: none;
+    background-color: #3a74e0da;
+    color: #f0f2f4da;
+    padding: 8px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+.stored-city {
+    list-style-type: none;
+    padding: 0;
+     
+}
+.stored-city li{
+    padding-bottom: .6rem;
+     
+}
+.list-buttons{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #6c7078da;
+    color: #020202da;
+    padding: 8px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    padding-bottom: .5rem;
+    
+}
+
+
+.current-weather-ta {
+    display: block;
+    width: 90%;
+    margin: 2rem;
+
 }
 
 #ul_5day_forecast {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
-    list-style-type:none;
-    
-}
-#ul_5day_forecast li{
-    
-    background-color: rgb(20, 23, 49);
-    color:#ffffff;
-    padding:2rem;
+    justify-content: space-around;
+    list-style-type: none;
+
 }
 
+#ul_5day_forecast li {
+
+    background-color: rgb(20, 23, 49);
+    color: #ffffff;
+    padding: 2rem;
+}

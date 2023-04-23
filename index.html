@@ -22,12 +22,12 @@
                     <li> <label for="city-name">
                             <h2 class="pd-2"> Search for a City: </h2>
                         </label> </li>
-                    <li> <input class="input" type="text" placeholder="San Diego"> </li>
-                    <li> <button class="button is-info" type="submit">Search</button> </li>
+                    <li> <input id="textbox" class="input" type="text" placeholder="San Diego"> </li>
+                    <li> <button id="button" class="button is-info" type="submit">Search</button> </li>
                 </ul>
             </form>
             <section>
-                <ul class="stored-city"></ul> <!-- generate list of buttons with this element for the searched city names from local storage-->
+                <ul class="stored-city" id="searched-city"></ul> <!-- generate list of buttons with this element for the searched city names from local storage-->
             </section>
         </section>
         <div id="flex-auto">
@@ -41,9 +41,10 @@
                 <ul id="ul_5day_forecast"></ul> <!-- generate a list of textareas with 5 day forecast here -->
             </section>
         </div>
-    </div>   
+    </div>  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script> 
 </body>
-
 </html>
 
 <!-- <ul id="ul_5day_forecast"> generate a list of textareas with 5 day forecast here 
