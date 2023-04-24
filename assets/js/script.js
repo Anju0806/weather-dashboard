@@ -70,7 +70,7 @@ $(function () {
                 let temperature = day.main.temp;
                 let wind = day.wind.speed.toFixed(2);//fix decimal to 2 digits
                 let humidity = day.main.humidity;
-                
+                console.log(typeof(city));
                 let cityHeading = document.createElement('h2');
                 cityHeading.textContent = city;
 
