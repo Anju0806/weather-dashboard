@@ -5,7 +5,7 @@ $(function () {
     let $textbox = $('#textbox');
     let $searchButton = $('#button');
     let $storedCityButtons = $('#searched-city');
-    let $currentTextarea = $('#current-weather');
+    //let $currentWeatherList = $('#current-weather');
 
     generateStoredCityButtons();
     //add search button click event
@@ -57,10 +57,10 @@ $(function () {
             .catch(error => console.error(error));
     }
     function displayCurrentWeather(forecast, city) {
-        let currentWeatherText = '';
+        let = '';
         let today = new Date();
         date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
-
+        currentWeather = {};
         forecast.forEach(day => {
             apiDate = day.dt_txt;
             apiDate = new Date(apiDate);
@@ -70,14 +70,30 @@ $(function () {
                 let temperature = day.main.temp;
                 let wind = day.wind.speed.toFixed(2);//fix decimal to 2 digits
                 let humidity = day.main.humidity;
-                console.log(typeof(city));
-                let cityHeading = document.createElement('h2');
-                cityHeading.textContent = city;
 
-                currentWeatherText += `${cityHeading}(${date})\n\n\nTemp: ${temperature}F\n\nWind Speed: ${wind}MPH\n\nHumidity: ${humidity}%\n\n`;
+                //display to document
+                const h2 = document.createElement("h2");
+                h2.textContent = `${city} (${date})`;
+                const tempDiv = document.createElement("div");
+                tempDiv.textContent = `Temp: ${temp}`;
+                const windDiv = document.createElement("div");
+                windDiv.textContent = `Wind Speed: ${windSpeed}`;
+                const humDiv = document.createElement("div");
+                humDiv.textContent = `Humidity: ${humidity}`;
+                const li = document.createElement("li");
+                li.appendChild(h2);
+                li.appendChild(tempDiv);
+                li.appendChild(windDiv);
+                li.appendChild(humDiv);
+                const ul = document.getElementById("current-weather");
+                ul.appendChild(li);
+
+                //currentWeatherText += `${cityHeading}(${date})\n\n\nTemp: ${temperature}F\n\nWind Speed: ${wind}MPH\n\nHumidity: ${humidity}%\n\n`;
             }
         });
-        document.getElementById('current-weather').value = currentWeatherText;
+        //document.getElementById('current-weather').value = currentWeatherText;
+        // $currentWeatherList.value = currentWeather;
+
     }
 
 

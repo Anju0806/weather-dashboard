@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
+
 <body>
     <header class="p-3 text-center text-white bg-primary">
         <h1>Weather Dashboard</h1>
@@ -26,26 +27,29 @@
                     <li> <button id="button" class="button is-info" type="submit">Search</button> </li>
                 </ul>
             </form>
-            <section>
-                <ul class="stored-city" id="searched-city"></ul> <!-- generate list of buttons with this element for the searched city names from local storage-->
+            <section>  <!-- generate list of buttons with this element for the searched city names from local storage-->
+                <ul class="stored-city" id="searched-city"></ul>
             </section>
         </section>
-        <div id="flex-auto">
-            <textarea style="resize: none;" id="current-weather" class="current-weather-ta" readonly placeholder="city weather goes here" rows="10"> 
 
-            </textarea> <!-- generare current city weather here -->
-            <label for="city-name">
-                <h3 class="m-2"> 5-Day Forecast: </h3>
-            </label>
+        <section id="flex-auto">
+            <!--  <textarea style="resize: none;" id="current-weather" class="current-weather-ta" readonly placeholder="city weather goes here" rows="10"> 
 
+            </textarea>-->
+            <!-- generare current city weather here -->
+            <ul id="current-weather" class="current-weather-ta"></ul>   
             <secton id="sec_5day_forcast">
+                <label for="city-name">
+                    <h3 class="m-2"> 5-Day Forecast: </h3>
+                </label>
                 <ul id="ul_5day_forecast"></ul> <!-- generate a list of textareas with 5 day forecast here -->
             </section>
-        </div>
-    </div>  
+        </section>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/script.js"></script> 
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
 
 <!-- <ul id="ul_5day_forecast"> generate a list of textareas with 5 day forecast here 
