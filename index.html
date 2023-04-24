@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
@@ -33,16 +32,12 @@
         </section>
 
         <section id="flex-auto">
-            <!--  <textarea style="resize: none;" id="current-weather" class="current-weather-ta" readonly placeholder="city weather goes here" rows="10"> 
-
-            </textarea>-->
-            <!-- generare current city weather here -->
-            <ul id="current-weather" class="current-weather-ta"></ul>   
+            <!-- generare todays city weather here -->
+            <ul id="current-weather" hidden="true" class="current-weather-ul"></ul>   
+            <!-- generate a 5 day forecast here -->
             <secton id="sec_5day_forcast">
-                <label for="city-name">
-                    <h3 class="m-2"> 5-Day Forecast: </h3>
-                </label>
-                <ul id="ul_5day_forecast"></ul> <!-- generate a list of textareas with 5 day forecast here -->
+                <h3 class="m-2" hidden="true"> 5-Day Forecast: </h3>
+                <ul id="ul_5day_forecast"></ul>             
             </section>
         </section>
     </div>
