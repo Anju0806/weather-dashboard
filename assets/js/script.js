@@ -45,8 +45,9 @@ $(function () {
                     ul.innerHTML = '';
                     document.getElementById("current-weather").hidden = false;
                     const erroDiv = document.createElement("div");
-                    erroDiv.textContent = `Could not load weather data for ${cityinput}`;
+                    erroDiv.textContent = `Could not load weather data for ${cityinput}, Please try again!!`;
                     const li = document.createElement("li");
+                    document.getElementById("sec_5day_forcast").hidden = true;
                     li.appendChild(erroDiv);
                     ul.appendChild(li);
                     //alert("please try again");
@@ -56,14 +57,10 @@ $(function () {
                 fetch(requestUrl1)
                     .then(response => response.json())
                     .then(data => {
-                        
                         let forecast = data.list[0]
                         displayCurrentWeather(forecast, cityinput);
-                        console.log("data:::::");
-                        console.log(data);
-                        console.log("forcasts:::::");
-                        let forecasts = data.list.filter(item => item.dt_txt.endsWith('12:00:00')).slice(1, 6);
-                        console.log(forecasts);
+                        let forecasts = data.list.filter(item => item.dt_txt.endsWith('00:00:00')).slice(0,6);
+                        console.log(forecasts.length)
                         displayWeather(forecasts);
                     })
                     .catch(error => console.error(error));
@@ -76,9 +73,7 @@ $(function () {
         ul.innerHTML = ''; // clear the contents of the ul element
         let today = new Date();
         date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
-        //currentWeather = {};
         let weatherIcon = forecast.weather[0].icon;
-        //console.log(weatherIcon);
         let iconUrl = `https://openweathermap.org/img/wn/${weatherIcon}.png`;
         var temperature = forecast.main.temp;
         var humidity = forecast.main.humidity;
@@ -107,10 +102,11 @@ $(function () {
 
     function displayWeather(forecasts) {
         
-        document.getElementById("m-2").hidden = false;
+        document.getElementById("sec_5day_forcast").hidden = false;
         var ul = document.getElementById("ul_5day_forecast");
+        //document.getElementById("ul_5day_forecast").hidden = false;
         ul.innerHTML = '';
-        console.log(forecasts.length);
+        
 
         for (let i = 0; i < forecasts.length; i++) {
             let day = forecasts[i].dt_txt;
@@ -123,7 +119,6 @@ $(function () {
             var temperature = forecasts[i].main.temp;
             var humidity = forecasts[i].main.humidity;
             var windSpeed = forecasts[i].wind.speed;
-            //city = city.charAt(0).toUpperCase() + city.slice(1)
             const h2 = document.createElement("h2");
             h2.textContent = `${date}`;
             let img = document.createElement("img");
@@ -141,10 +136,7 @@ $(function () {
             li.appendChild(windDiv);
             li.appendChild(humDiv);
             ul.appendChild(li);
-
-
         }
-
     }
 
 
