@@ -50,7 +50,6 @@ $(function () {
                     document.getElementById("sec_5day_forcast").hidden = true;
                     li.appendChild(erroDiv);
                     ul.appendChild(li);
-                    //alert("please try again");
                     return;
                 }
                 let requestUrl1 = `https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&cnt=40&limit=5&appid=63fc63eca8b2591691b726308f92bb10&units=metric`;
@@ -83,6 +82,8 @@ $(function () {
         h2.textContent = `${city} (${date})`;
         let img = document.createElement("img");
         img.src = iconUrl;
+        img.style.width = "40px";
+        img.style.height = "40px";
         h2.appendChild(img);
         const tempDiv = document.createElement("div");
         tempDiv.textContent = `Temp: ${temperature}\u00B0 F`;
@@ -123,6 +124,8 @@ $(function () {
             h2.textContent = `${date}`;
             let img = document.createElement("img");
             img.src = iconUrl;
+            img.style.width = "30px";
+            img.style.height = "30px";
             h2.appendChild(img);
             const tempDiv = document.createElement("div");
             tempDiv.textContent = `Temp: ${temperature}\u00B0 F`;
@@ -171,10 +174,7 @@ $(function () {
     $clearButton.on('click', function (event) {
         localStorage.setItem('cityStored', JSON.stringify([]));
         generateStoredCityButtons();
-
     });
-
-
 });
 
 

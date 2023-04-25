@@ -1,24 +1,28 @@
-
-# 06 Server-Side APIs: Weather Dashboard
+## Weather Dashboard
 
 ## Description
-
- A weather dashboard that will run in the browser to see the weather outlook for multiple cities and feature dynamically updated HTML and CSS. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. 
+Weather Dashboard is a user-friendly web application designed to provide weather outlooks for multiple cities. With its dynamic HTML and CSS, the application fetches real-time weather data from a reliable third-party API. Users can easily search for any city and instantly view the current and future weather conditions, including temperature, humidity, wind speed, and weather icons. The application also maintains a search history for quick reference, allowing users to keep track of previously searched cities with ease.
 
 ## Usage
+To use the Weather Dashboard:
 
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
- 
+1. Open the web application in a browser.
+2. Enter the name of a city in the search input.
+3. Click the search button or press Enter.
+4. The current weather conditions for the city 
+will be displayed, including the city name, date, weather icon, temperature, humidity, and wind speed.
+5. A 5-day forecast for the city will also be displayed, showing the date, weather icon, temperature, humidity, and wind speed.
+6. The searched city will be added to the search history.
+7. Users can click on a city in the search history to view its current and future weather conditions again.
+
+## Credits
+API keys usage:
+https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys
+
+OpenWeatherMap 5-day forecast API:
+https://openweathermap.org/forecast5
+
 ## Links
-
 * The URL of the GitHub repository that contains the code:
 https://github.com/Anju0806/weather-dashboard.git
 
@@ -26,9 +30,10 @@ https://github.com/Anju0806/weather-dashboard.git
 https://anju0806.github.io/weather-dashboard/
 
 ## Screenshots
+[Add screenshots here]
 
 ## Installation
 N/A
 
 ## License
-Please refer to the LICENSE in the repo.
+Please refer to the LICENSE file in the repository.
