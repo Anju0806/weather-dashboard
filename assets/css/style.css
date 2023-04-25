@@ -12,7 +12,7 @@ body {
     padding: .3rem;
 }
 
-.m-2 {
+#m-2 {
     margin: 2rem;
 }
 
@@ -77,9 +77,9 @@ body {
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    border-radius: 5px;
-    
+    border-radius: 5px;   
 }
+
 
 .stored-city {
     list-style-type: none;
@@ -129,5 +129,5 @@ body {
 
     background-color: rgb(20, 23, 49);
     color: #ffffff;
-    padding: 2rem;
+    padding: 1rem;
 }
