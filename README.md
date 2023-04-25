@@ -30,7 +30,7 @@ https://github.com/Anju0806/weather-dashboard.git
 https://anju0806.github.io/weather-dashboard/
 
 ## Screenshots
-[Add screenshots here]
+![screencapture1](https://user-images.githubusercontent.com/126565826/234321423-2f1f935d-82d8-48a8-b272-286f33b72197.png)
 
 ## Installation
 N/A
